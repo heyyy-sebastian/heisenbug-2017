@@ -15,9 +15,9 @@ A Heisenbug is a bug that disappears or changes when you try to examine it. It's
 
 This game was written using:
 
--HTML5
--CSS3
--JavaScript
--JQuery
+- HTML5
+- CSS3
+- JavaScript
+- JQuery
 
 None of these photos are mine and are being used solely for educational purposes.
