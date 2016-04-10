@@ -1,0 +1,250 @@
+/*Styling TOC*/
+
+/*Resets & Clearfix: Lines 10-65*/
+/*Body Styling: Lines 68-84*/
+/*Game Window: Lines 86-102 */
+/*Player Score Keeping: Lines 105-148 */
+/*Footnote styling: 150-167*/
+/*Moth & Patch Styling: 169-182*/
+/*Timer & Pop-ups: Lines 184-250*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Clearfix */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Custom Styling*/
+/*Body Styling*/
+
+body{
+font-family: Garamond, serif;
+color: #e0eeee;
+font-weight: bold;
+background-color: #104e8b;
+padding: 2em;
+letter-spacing: .1em;
+}
+
+h1{
+  font-size: 3em;
+  text-transform: uppercase;
+  margin-left: .6em;
+  padding-bottom: .8em;
+}
+
+/*Game Window Styling*/
+
+#img-container{
+  display: inline-block;
+  width: 699px;
+  height: 477px;
+  overflow: hidden;
+  border: .5em solid #344152;
+  margin: 0 1.5em;
+}
+
+#player-screen{
+  height: 520px;
+  width: 742px;
+  margin-left: -18px;
+  margin-top: -15px;
+  }
+
+/*Player Scorekeeping*/
+#scoreboard{
+  display: inline-block;
+  width: 23%;
+  height: 477px;
+  margin-left: 1.2em;
+  vertical-align: top;
+}
+
+.round-style, #game-start-pop-up, #next-round, #rules-list, #victory{
+  background-color: #e0eeee;
+  border: .2em solid #344152;
+  color: #344152;
+}
+
+.round-style{
+  padding: 1em;
+  margin-bottom: .8em;
+  display:block;
+}
+
+h2, .to-play, .button, #victory{
+  padding: .2em;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+}
+
+.round-style p{
+  padding: .5em;
+}
+
+.player-score{
+  text-decoration: none;
+}
+
+.button{
+  display: inline-block;
+  background-color: #344152;
+  color: #e0eeee;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #939393;
+  width: 37%;
+  text-align: center;
+}
+
+/*Foonote styling*/
+a{
+  text-decoration: none;
+  color: #e0eeee;
+}
+
+a:hover{
+  color: #344152;
+}
+
+footer{
+  margin: 1.8em;
+  line-height: 1.4em;
+}
+
+footer span{
+  text-decoration: underline;
+}
+
+/*Bug & Patch Styling*/
+.moth{
+  position: absolute;
+  background-image: url(img/moth.gif);
+  width: 80px;
+  height: 57px;
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+}
+
+.moth.patch{
+  background-position: center;
+  background-image: url(img/patch.jpeg);
+}
+
+/*Timer styling*/
+.roundTimer{
+  margin: .5em 0 0 .9em;
+  font-size: 2em;
+}
+
+/*Pop-Up styling*/
+#game-start-pop-up, #next-round, #rules-list, #victory{
+  position: absolute;
+  text-align: center;
+  padding: .8em;
+  top: 150px;
+  left:-600px;
+  line-height: 1.65em;
+  font-size: 1.2em;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 1.5s;
+  animation: slide 0.5s forwards;
+  animation-delay: 1.5s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 250px; }
+}
+
+#game-start-pop-up, #rules-list{
+  height: 264px;
+  width: 564px;
+}
+
+#rules-list{
+  display: none;
+  position: absolute;
+}
+
+#game-start-pop-up p, #rules-list p{
+  padding: 0 .5em .4em;
+  margin-bottom: 0em;
+}
+
+#next-round, #victory{
+  display: none;
+  position: absolute;
+  height: 80px;
+  width: 280px;
+  top: 300px;
+}
+
+#next-round span{
+  line-height: 2em;
+}
+
+.start, #continue{
+  padding: .2em .4em;
+  background-color: #344152;
+  color: #e0eeee;
+}
+
+#game-start-pop-up .start{
+  padding: .2em .8em;
+  background-color: #344152;
+  color: #e0eeee;
+}
+
+.button:hover, .start:hover{
+  opacity: .5;
+}

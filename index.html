@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--HTML Table Of Contents-->
+<!--Body: Lines 15-74 -->
+<!--Game Rules & Pop-Ups: Lines 21-41 -->
+<!--Game Viewport Div: Lines 42-44 -->
+<!--Scoreboard: Lines 45-65 -->
+<!--Timer & Footer: Lines 66-74 -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Project One</title>
-  <link rel="stylesheet" href="">
+  <title>Heisenbugger</title>
+  <link rel="stylesheet" href="styling.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+<h1>
+Heisenbugger<a href="#ending">*</a>
+</h1>
+<main>
+<section id="game-start-pop-up">
+  <h2>Welcome to Heisenbugger!</h2>
+  <p>Take turns playing against your opponent to fix as many
+  bugs as possible in your computer. Click each bug to patch it up,
+  but be careful! Once you patch over all your bugs, new bugs will appear.
+  Each round lasts for 30 seconds, and whoever fixes the most bugs by
+  the end of Round 3 wins.</p>
+  <span class="to-play">Player One ready? <span class="start">Go</span></span>
+</section>
+<div id="next-round">
+  <p class="to-play">Next player ready?<br><span class="start">Go</span></p>
+</div>
+<div id="rules-list">
+  <p>Take turns playing against your opponent to patch over as many
+  bugs as possible in your computer, but be careful! Once you patch over your bugs, new bugs will appear.
+  Each round lasts for 30 seconds, and whoever patches the most bugs by the end of Round 3 wins.</p>
+  <span id="continue">Continue?</span>
+</div>
+<div id="victory">
+<span id="next-game" class="start to-play">Start over?</span>
+</div>
+<div id="img-container">
+  <img id="player-screen" src="img/Electronic-copy-board01.jpg" alt="Computer Board">
+</div>
+<div id="scoreboard">
+<section class="round-style">
+  <h2>Round One</h2>
+  <p>Player One Score: <span id="round-1a-score" class="player-score"></span></p>
+  <p>Player Two Score: <span id="round-1b-score" class="player-score"></span></p>
+</section>
+<section class="round-style">
+  <h2>Round Two</h2>
+  <p>Player One Score: <span id="round-2a-score" class="player-score"></span></p>
+  <p>Player Two Score: <span id="round-2b-score" class="player-score"></span></p>
+</section>
+<section class="round-style">
+  <h2>Round Three</h2>
+  <p>Player One Score: <span id="round-3a-score" class="player-score"></span></p>
+  <p>Player Two Score: <span id="round-3b-score" class="player-score"></span></p>
+</section>
+<div class="round-style">
+  <div class="button" id="rules">Rules</div>
+  <div class="button" id="exit-game">Exit</div>
+</div>
+</div>
+<div>
+<p class="roundTimer"><time id="counting">00:30</time></p>
+</div>
+</main>
+<footer id="ending">
+  <p>*A Heisenbug is a bug in your code that seemingly disappears when you try to
+  examine it.<br> Read more on the all-knowing
+  <span><a href="https://en.wikipedia.org/wiki/Heisenbug">Wikipedia</a></span>.</p>
+</footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
 </html>
